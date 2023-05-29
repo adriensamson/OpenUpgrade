@@ -92,7 +92,7 @@ def migrate(env, version):
     merge_priorities(env)
     delete_domain_from_view(env)
     openupgrade.load_data(env.cr, "stock", "14.0.1.1/noupdate_changes.xml")
-    recompute_stock_picking_scheduled_date(env)
+    #recompute_stock_picking_scheduled_date(env)
     save_stock_picking_date_deadline(env)
     recompute_stock_move_delay_alert_date(env)
     openupgrade.delete_record_translations(
